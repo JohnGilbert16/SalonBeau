@@ -1,0 +1,92 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+  rel="stylesheet"
+/>
+<link href="https://rawgit.com/fraserxu/ionic-rating/master/ionic-rating.css" rel="stylesheet">
+<script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+<script src="https://rawgit.com/fraserxu/ionic-rating/master/ionic-rating.min.js"></script>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        class="back-btn"
+        text=""
+        icon="arrow-back"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div class="container">
+  <p>{{salonData[0]?.salonName}}</p>
+
+  <ion-content>
+    <ion-slides [options]="option" class="ion-margin-top">
+      <ion-slide>
+        <ion-card id="img" button>
+          <img id="size" [src]="salonData[0]?.logoUrl" />
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+    <ion-card class="services">
+      <label>Services</label>
+
+      <!-- list of service-->
+      <ion-item>
+        <ion-list *ngFor="let salonService of servicesSalonData">
+          <ion-item
+            [routerLink]="['/user-appointment',salonData[0]?.id, salonService?.category]"
+            class="ion-button"
+          >
+            <ion-label> {{salonService.category}} </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-item>
+
+      <br /><br />
+      <div class="appointment" *ngIf="userDataArray[0]?.type!='salon'">
+        
+      <ion-item
+        [routerLink]="['/user-appointment',salonData[0]?.id]"
+        class="ion-button"
+      >
+        <ion-label>Make Appointment</ion-label>
+      </ion-item>
+      </div>
+
+      <br />
+
+
+      <ion-label>Add Ratings and FeedBack</ion-label> 
+      <html ng-app="ionicApp">
+    <meta charset="utf-8">
+
+
+      <ion-item ng-controller="MainCtrl"
+      class = "ion-button"
+      ><br/>
+      <ion-content class="row, col, card, item item-divider, item item-text-wrap, list">Rating</ion-content>
+      <rating ng-model="ratingFull.rate" max="ratingFull.max"></rating>
+      
+    
+    </ion-item>
+
+      <ion-item class="item">
+        <ion-label class="text-stl2" position="floating">
+          FeedBack
+        </ion-label>
+        <ion-input         
+        [(ngModel)]="feedback"
+        name="feedback"
+        class="float"
+        type="text"
+        placeholder=""> <br/></ion-input>
+      </ion-item>
+      <button (click)="onSubmit()"  class="submit" > Submit</button>
+      </html>
+    </ion-card>
+  </ion-content>
+</div>

@@ -1,0 +1,65 @@
+  // SEARCH BEGINS
+  .search {
+    width: 350px;
+    margin: 20px auto;
+    background: #FCD5CE;
+    background: #F8EDEB;
+    border-radius:  10px;
+    border: 1px solid #fff;
+    
+    input {
+      width: 150px;
+      padding: 10px 5px;
+      color: #000;
+      border: 0;
+      background: transparent;
+      border-radius: 3px 0 0 3px;
+      &:focus {
+        outline: 0;
+        background:transparent;
+      }
+    }
+    
+    button {
+      position: relative;
+      float: right;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      height: 40px;
+      width: 100px;
+      color: #000;
+      background: transparent;
+      border-radius: 0 3px 3px 0;
+      &:hover {
+        background: #fff;
+      }
+      &:active {
+        box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+      }
+      &:focus {
+        outline: 0;
+      }
+    }  
+  }
+  // SEARCH ENDS
+
+#size{
+    width: 420px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.ion-activated{
+    background-color: #FFB5A7;
+    margin: 10px;
+    font-weight: 600;
+}
+
+ion-card-content{
+  font-size: 20px;
+  font-weight: 600;
+  color: #544f4ec0;
+}
+
+

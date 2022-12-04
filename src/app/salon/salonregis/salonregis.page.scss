@@ -1,0 +1,40 @@
+img {
+    padding-top: 20%;
+}
+
+.item{
+    font-family: 'poppins', sans-serif;
+    width: 90%;
+    font-size: 18px;
+}
+
+.float{
+    background-color: #F9DCC4;
+}
+
+                
+.submit{
+    margin: auto;
+    top: 85%;
+    left: 25px;
+    width: 85%;
+    height: 35px;
+    border-radius: 20px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    position: absolute;
+    background-color: #F9DCC4;
+}
+
+.submit:hover{
+    color: #f4978e;
+}
+
+.my-checkbox {
+    display: flex;
+    padding-left: 8%
+}
+
+.text{
+    padding-left: 10%;
+}

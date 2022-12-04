@@ -1,0 +1,57 @@
+<ion-content>
+  <img src="assets/SaloNearby-2.png" />
+  <div class="card-flex">
+    <ion-card class="shadow">
+      <ion-card-content>
+        <ion-item lines="full">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input
+            [(ngModel)]="emailLogin"
+            name="emailLogin"
+            id="emailLogin"
+            class="float"
+            type="text"
+            placeholder="Email"
+          ></ion-input>
+        </ion-item>
+        
+        <ion-item lines="full">
+          <ion-input
+            name="password2"
+            id="password2"
+            [(ngModel)]="passwordLogin"
+            type="password"
+            placeholder="Password"
+          ></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-button class="login-btn" color="#FFB5A7" type="submit" (click)="login()"
+    >Sign In</ion-button
+  >
+  <br />
+  <br />
+
+  <div class="signup">
+    <p>Doesn't have an account?</p>
+    <a class="create" (click)="toSignUp('signup')">Sign up</a>
+  </div>
+
+  <a class="forgot" (click)="toSignUp('forgotpass')">Forgot Password?</a>
+  <!-- <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+      <span *ngIf="email.errors?.required">Email is required</span>
+      <span *ngIf="email.errors?.email">Email is invalid</span>
+    </div>
+
+    <div
+      *ngIf="(password.dirty || password.touched) && password.errors"
+      class="errors"
+    >
+      <span *ngIf="password.errors?.required">Password is required</span>
+      <span *ngIf="password.errors?.minlength"
+        >Password needs to be 6 characters</span
+      >
+    </div> -->
+</ion-content>

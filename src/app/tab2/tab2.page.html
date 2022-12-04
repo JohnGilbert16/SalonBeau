@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>All Salons</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- List of Text Items -->
+<ion-content>
+  <ion-list>
+    <ion-card class="salons" *ngFor="let salon of salonData">
+      <button class="salon-style" [routerLink]="['/saloninter/',salon.id]">
+        <img src="{{ salon?.logoUrl}}" alt="" height="60px" width="60px" />
+        <ion-label class="each-salon">{{salon.salonName}}</ion-label>
+      </button>
+    </ion-card>
+  </ion-list>
+</ion-content>

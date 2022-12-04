@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "salon-nearby-e724b": {
+      "hosting": {
+        "app": [
+          "salonnearbyy"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "salon-nearby-e724b"
+  }
+}

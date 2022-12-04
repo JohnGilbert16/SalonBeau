@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reset Your Password</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class = " container ion-text-center">
+  <img src = "assets/SaloNearby-2.png">
+</div>
+<ion-content>
+  <form class="center">
+    <ion-item lines ="full" >
+      <ion-label position="floating">Type Your Email</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    
+    <ion-row>
+      <ion-col>
+        <button (click)= 'updatePassword()' class="changepass" type="submit" >Submit</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

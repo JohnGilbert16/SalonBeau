@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Salon Dashboard</ion-title>
+    <ion-button type="Button" expanded="block"[routerLink]="['/tabs/tab1']" ><ion-icon name="Home"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <button [routerLink]="['/apptsched']" class="appt-sched">
+    View Appointments
+  </button>
+  <button [routerLink]="['/addservice']" class="services">
+    Manage Services
+  </button>
+  <button [routerLink]="['/ratings']" class="ratings">Ratings/Feedbacks</button>
+</ion-content>
+
+
+<ion-button type="button" expand="block" (click)="logout()">Logout</ion-button>

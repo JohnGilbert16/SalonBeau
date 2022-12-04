@@ -1,0 +1,66 @@
+img {
+  padding-top: 15%;
+}
+
+.login-btn {
+  margin: auto;
+  top: 50%;
+  left: 16%;
+  width: 70%;
+  height: 35px;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  background-color: #ffb5a7;
+}
+
+.email {
+  width: 90%;
+  height: auto;
+  font-family: "poppins", sans-serif;
+}
+
+.password {
+  width: 90%;
+  height: auto;
+  font-family: "poppins", sans-serif;
+  
+}
+
+.shadow {
+  box-shadow: none;
+}
+
+.forgot {
+  top: 45%;
+  left: 65px;
+  position: absolute;
+  margin: auto;
+}
+
+.signup {
+  margin: auto;
+  top: 55%;
+  left: 25%;
+  width: 70%;
+  height: 35px;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  position: absolute;
+}
+
+.create {
+  margin: auto;
+  top: 95%;
+  left: 25%;
+  width: 70%;
+  height: 35px;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  position: absolute;
+}
+
+ion-icon{
+  vertical-align: center;
+  padding-top: 5%;
+}

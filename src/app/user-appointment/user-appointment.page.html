@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      </ion-buttons>
+    <ion-title>Appointment Information</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="container">
+    <form>
+      <ion-input
+        name="name"
+        [(ngModel)]="name"
+        class="customer-info1"
+        type="text"
+        placeholder="Name"
+      ></ion-input>
+
+      <ion-input
+        name="address"
+        [(ngModel)]="address"
+        class="customer-info2"
+        type="text"
+        placeholder="Address"
+      ></ion-input>
+
+      <ion-input
+        name="contactNumber"
+        [(ngModel)]="contactNumber"
+        class="customer-info3"
+        type="text"
+        placeholder="Contact Number"
+      ></ion-input>
+
+      <ion-select
+        name="services"
+        [(ngModel)]="services"
+        placeholder="Select services"
+        [value]="salonServiceParams"
+      >
+        <ion-select-option
+          *ngFor="let services of servicesList"
+          value="{{services?.category}} "
+        >
+          {{services?.category}}</ion-select-option
+        >
+      </ion-select>
+
+      <ion-input
+        name="date"
+        [(ngModel)]="date"
+        class="customer-info5"
+        type="date"
+        placeholder="Date"
+        >Date</ion-input
+      >
+      <ion-input
+        name="time"
+        [(ngModel)]="time"
+        class="customer-info6"
+        type="time"
+        placeholder="Time"
+        >Time
+      </ion-input>
+    </form>
+    <!-- For Looping, bind to a component -->
+    <!-- *ngFor="let services of servicesLists" -->
+
+    <!-- getting the value -->
+    <!-- {{services?.category}} -->
+    <!-- {{services?.subCategory}} -->
+    <!-- {{services?.cost}} -->
+
+    <button class="add-app" (click)="addAppointment()">Add Appointment</button>
+
+    
+  </ion-card>
+</ion-content>

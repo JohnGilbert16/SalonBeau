@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Adding Service</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="length">
+    <ion-label class="text-stl2" position="floating">Name of Service</ion-label>
+    <ion-input
+      class="blank"
+      [(ngModel)]="category"
+      type="text"
+      placeholder=" "
+    ></ion-input>
+  </ion-item>
+
+  <ion-item class="length">
+    <ion-label class="text-stl2" position="floating">Sub-category</ion-label>
+    <ion-input
+      class="blank"
+      [(ngModel)]="subCategory"
+      type="text"
+      placeholder=" "
+    ></ion-input>
+  </ion-item>
+  <ion-item class="length">
+    <ion-label class="text-stl2" position="floating">Cost</ion-label>
+    <ion-input
+      class="blank"
+      [(ngModel)]="cost"
+      type="number"
+      placeholder=" "
+    ></ion-input>
+  </ion-item>
+
+
+
+  <button class="submit" (click)="addServices()">Submit</button>
+</ion-content>

@@ -1,0 +1,45 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+  rel="stylesheet"
+/>
+
+<ion-tabs>
+  <img src="assets/user.png" />
+  <label id="user">{{userData[0]?.firstName}} {{userData[0]?.lastName}}</label>
+
+  <div class="center">
+    <button
+      *ngIf="userData.length==0"
+      [routerLink]="['/customer-login']"
+      class="button"
+    >
+      Login
+    </button>
+    <button
+      *ngIf="userData.length==0"
+      [routerLink]="['/signup']"
+      class="button"
+    >
+      Sign Up
+    </button>
+    <button
+      *ngIf="userData.length==0||userData.length!=0"
+      [routerLink]="['/salonregis/',userData[0]?.uid]"
+      class="button"
+    >
+      Start your Salon's journey
+    </button>
+    <button
+      *ngIf="userData.length!=0 && userData[0].type=='salon'"
+      [routerLink]="['/dashboard']"
+      class="button"
+    >
+      Your Salon
+    </button>
+    <button *ngIf="userData.length!=0" (click)="logout()" class="button">
+      Logout
+    </button>
+  </div>
+</ion-tabs>

@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- Application Form -->
+<ion-content>
+  <div>
+    <img src="assets/SaloNearby-2.png" />
+  </div>
+  <div>
+    <ion-item class="item">
+      <ion-label class="text-stl2" position="floating">Salon Name</ion-label>
+      <ion-input
+        [(ngModel)]="salonName"
+        name="salonName"
+        class="float"
+        type="text"
+        placeholder=" "
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="item">
+      <ion-label class="text-stl2" position="floating">Address</ion-label>
+      <ion-input
+        [(ngModel)]="salonLocation"
+        name="salonLocation"
+        class="float"
+        type="text"
+        placeholder=" "
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="item">
+      <ion-label class="text-stl2" position="floating">Mobile Number</ion-label>
+      <ion-input
+        [(ngModel)]="contactNumber"
+        name="contactNumber"
+        class="float"
+        type="number"
+        placeholder=""
+      ></ion-input>
+    </ion-item>
+    <ion-item class="item">
+      <ion-label class="text-stl2" position="floating">Email</ion-label>
+      <ion-input
+        [(ngModel)]="email"
+        name="email"
+        class="float"
+        type="email"
+        placeholder=""
+      ></ion-input>
+    </ion-item>
+
+    <ion-item class="item">
+      <ion-label class="text-stl2" position="floating"
+        >Business Registration</ion-label
+      >
+      <ion-input
+        [(ngModel)]="businessRegistration"
+        name="businessRegistration"
+        class="float"
+        type="text"
+        placeholder=""
+      ></ion-input>
+    </ion-item>
+    <ion-item class="item">
+      <ion-label class="text-stl2">Salon Logo (1 x 1 size only)</ion-label>
+      <input
+        #upload
+        type="file"
+        placeholder=""
+        (change)="fileChange($event)"
+        hidden
+      />
+      <ion-button (click)="upload.click()">Upload Logo</ion-button>
+    </ion-item>
+
+    <br /><br />
+
+    <div float-right class="my-checkbox">
+      <ion-checkbox name="check"></ion-checkbox>
+      <ion-label class="text">I agree in all terms and conditions</ion-label>
+    </div>
+
+    <button  class="submit" (click)="uploadFile($event)">
+      Start Your Journey!
+    </button>
+  </div>
+</ion-content>
